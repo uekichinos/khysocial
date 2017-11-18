@@ -1,0 +1,42 @@
+#khysocial-container {
+	border:1px solid #9F9E9E;
+	margin:0px 0px 10px 0px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	box-shadow: 0px 0px 5px #888888;
+}
+#khysocial-text {
+	margin:5px;
+	display:block;
+	overflow:auto;
+}
+#khysocial-text a {
+	color:#000000;
+	text-decoration:none;
+}
+#khysocial-text a:hover {
+	text-decoration:underline;
+}
+#khysocial-text img {
+	border:1px solid #9F9E9E;
+}
+#khysocial-created {
+	border:1px solid #9F9E9E;
+	margin:5px;
+	display:block;
+	overflow:auto;
+	background-color:#CCCCCC;
+	padding:2px;
+	font-size: 11px;
+}
+#khysocial-created img {
+	float:right;
+}
+#khysocial-created a {
+	color:#000000;
+	font-weight:bold;
+	text-decoration:none;
+}
+#khysocial-created a:hover {
+	text-decoration:underline;
+}
