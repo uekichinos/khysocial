@@ -12,7 +12,9 @@ $qtype = $_POST['qtype'];
 $qstr = $_POST['qstr'];
 
 $connection = new TwitterOAuth($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
-if($qtype == "hashtag") $content = $connection->get("search/tweets", array("q" => $qstr, "count" => $limit, "exclude_replies" => true));
+if($qtype == "hashtag") {
+	$content = $connection->get("search/tweets", array("q" => $qstr, "count" => $limit, "exclude_replies" => true));
+}
 if($qtype == "handler") {
 	$handlers = explode(",", $qstr);
 	foreach($handlers as $key => $handler) {

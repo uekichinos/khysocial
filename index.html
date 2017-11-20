@@ -1,7 +1,7 @@
 <html>
 	<header>
 		<meta charset="UTF-8">
-		<title>Index</title>
+		<title>KhySocial</title>
 		<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/jquery.khysocial.css">
 	</header>
@@ -12,16 +12,23 @@
 		<script src="js/jquery.khysocial.min.js"></script>
 		<script>
 			$('#content').khysocial({
-				fontsize : 12,
-				debug : false,
-				social : {
-					twitter : {
-						query : "@uekichinos,@bursamktplc", 
-						limit : 3,
-						key : "",
-						secretkey : "",
-						token : "",
-						secrettoken : ""
+				fontsize: 12,
+				boxwidth: "300",
+				debug: false,
+				social: {
+					twitter: {
+						query: "", 
+						limit: 3,
+						key: "",
+						secretkey: "",
+						token: "",
+						secrettoken: ""
+					},
+					facebook: {
+						query: "",
+						limit: 5,
+						appid: "",
+						appsecret: "",
 					}
 				}
 			});
