@@ -1,44 +1,65 @@
 # KhySocial
 
-KhySocial is jquery plugin to get social media content. Currently we support Twitter and Facebook.
+KhySocial is jquery plugin to get social media content from Twitter and Facebook.
 
-----
-## Twitter
-1. Using TwitterOAuth for Twitter engine
-2. Sample query as below
+## Plugin Parameters
 
-**get tweet from single handler**
+- **fontsize** - set font size of content. default 14 pixel
+- **boxwidth** - set width for content boxes and value can be either pixel or percentage. default 200
+- **debug** - enable debug mode for troubleshooting. default false
+
+
+### Twitter
+
+- **query** - string use to get tweets. sample for usage as below
+
+A) get tweet from single handler
 
     query: "@uekichinos"
 
-**get tweet from multiple handler**
+B) get tweet from multiple handler
 
     query: "@uekichinos,@bursamktplc,@LisaSurihani"
 
-**get tweet from single handler and filter tweet based on hashtag**
+C) get tweet from single handler and filter tweet based on hashtag
 
     query: "#informedinvestor from:bursamktplc"
 
-## Facebook
-1. Using graph.facebook.com
+- **limit** - limit tweet return for each handlers. default 5
+- **key** - twitter consumer key
+- **secretkey** - twitter consumer secret
+- **token** - twitter access token
+- **secrettoken** - twitter access token secret
 
-**get post from single page**
+### Facebook
+
+- **query** - string use to get post. sample for usage as below
+
+A) get post from single page
 
     query: "page:BursaMarketplace"
 
-**get post from multiple pages**
+B) get post from multiple pages
 
     query: "page:BursaMarketplace,page:manchesterunited"
 
-**get post tweet from single page and filter post based on hashtag**
+C) get post tweet from single page and filter post based on hashtag
 
     query: "page:BursaMarketplace #informedinvestor"
 
-**get post tweet from multiple pages and filter post based on hashtag**
+D) get post tweet from multiple pages and filter post based on hashtag
 
     query: "page:BursaMarketplace #informedinvestor,page:manchesterunited #Pogback"
 
+- **limit** - limit post return for each pages. default 5
+- **appid** - facebook application id
+- **appsecret** - facebook application secret
+
 ## Change Log
+
+### [1.3.1] - 2017-11-22
+- update readme
+
 ### [1.3.0] - 2017-11-21
 - include social media Facebook
 - add in choice of query for Twitter and Facebook
