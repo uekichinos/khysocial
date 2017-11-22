@@ -22,7 +22,7 @@ foreach ($queries as $key => $query) {
 
 	if($targetid !== "") {
 		$page_feed = "https://graph.facebook.com/".$targetid."/feed?access_token=".$appid."|".$appsecret."";
-		$page_picture = "https://graph.facebook.com/".$targetid."/picture?access_token=196709690662902|3d25f4c24035132b57b1be8d4e68fb5c";
+		$page_picture = "https://graph.facebook.com/".$targetid."/picture";
 		$posts = json_decode(file_get_contents($page_feed, true));
 		$picture = base64_encode(file_get_contents($page_picture));
 
@@ -32,7 +32,8 @@ foreach ($queries as $key => $query) {
 					if (strpos($post->message, $hashtag) !== false) {
 						$records[$count]['created_time'] = $post->created_time;
 						$records[$count]['id'] = $post->id;
-						$records[$count]['message'] = "<img src='data:image/jpeg;base64,".$picture."' align='left'>".$post->message;
+						$records[$count]['message'] = $post->message;
+						$records[$count]['picture'] = $page_picture;
 						$records[$count]['handler'] = $targetid;
 
 						$count++;
@@ -42,7 +43,8 @@ foreach ($queries as $key => $query) {
 				else {
 					$records[$count]['created_time'] = $post->created_time;
 					$records[$count]['id'] = $post->id;
-					$records[$count]['message'] = "<img src='data:image/jpeg;base64,".$picture."' align='left'>".$post->message;
+					$records[$count]['message'] = $post->message;
+					$records[$count]['picture'] = $page_picture;
 					$records[$count]['handler'] = $targetid;
 
 					$count++;

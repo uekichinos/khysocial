@@ -1,15 +1,17 @@
 (function($) {	
     $.fn.khysocial = function(options) {
         var settings = $.extend({
-        	fontsize : 14,
-        	boxwidth : 200,
-            debug : false
+        	fontsize: 14,
+        	boxwidth: 200,
+            debug: false,
+            imgthumb: 'left',
         }, options);
 		return this.each( function() {
 			window.thisForm = this;
 			window.fontsize = settings.fontsize;
 			window.boxwidth = settings.boxwidth;
 			window.debug = settings.debug;
+			window.imgthumb = settings.imgthumb;
 
 			var postsArray = [];
 			var count = 0;
@@ -80,10 +82,11 @@
 						async: false,
 						data: {key:twkey, secretkey:twsecret, token:twtoken, secrettoken:twsecrettoken, limit:twlimit, qtype:querytype, qstr:querystr},
 						success: function(msg) {
-							if(querytype == "hashtag") {
-								$.each(msg.statuses, function(key, data) {
+							if(querytype == "hashtag") msg[0] = msg.statuses;
+							$.each(msg, function(key, data) {
+								$.each(data, function(key2, data2) {
 									var tw_text, tw_source, tw_created, tw_handler;
-									$.each(data, function(index, value) {
+									$.each(data2, function(index, value) {
 										if(settings.debug == true) console.log("[twitter] "+count+") "+index+" : "+value);
 										if(index == "text") tw_text = $.fn.convertLink(value);
 										else if(index == "source") tw_source = value;
@@ -92,7 +95,7 @@
 											$.each(value, function(index_user, value_user) {
 												if(settings.debug == true) console.log("- "+index_user+" : "+value_user);
 												if(index_user == "screen_name") tw_handler = value_user;
-												if(index_user == "profile_image_url" && value_user != "") tw_text = "<img src='"+value_user+"' align='left'> "+tw_text;
+												if(index_user == "profile_image_url" && value_user != "") tw_text = "<img src='"+value_user+"' align='"+window.imgthumb+"'> "+tw_text;
 											});
 										}
 									});
@@ -101,31 +104,7 @@
 									postsArray[count] = {text:tw_text, handler:tw_handler, timesince:timesince, timestamp:timestamp, social:"tw"};
 									count++;
 								});
-							}
-							else if(querytype == "handler") {
-								$.each(msg, function(key, data) {
-									$.each(data, function(key2, data2) {
-										var tw_text, tw_source, tw_created, tw_handler;
-										$.each(data2, function(index, value) {
-											if(settings.debug == true) console.log("[twitter] "+count+") "+index+" : "+value);
-											if(index == "text") tw_text = $.fn.convertLink(value);
-											else if(index == "source") tw_source = value;
-											else if(index == "created_at") tw_created = value;
-											if(index == "user") {
-												$.each(value, function(index_user, value_user) {
-													if(settings.debug == true) console.log("- "+index_user+" : "+value_user);
-													if(index_user == "screen_name") tw_handler = value_user;
-													if(index_user == "profile_image_url" && value_user != "") tw_text = "<img src='"+value_user+"' align='left'> "+tw_text;
-												});
-											}
-										});
-										var timestamp = Date.parse(tw_created)/1000;
-										var timesince = $.fn.timesince(tw_created);
-										postsArray[count] = {text:tw_text, handler:tw_handler, timesince:timesince, timestamp:timestamp, social:"tw"};
-										count++;
-									});
-								});
-							}
+							});
 						}
 					});
 				}
@@ -181,6 +160,7 @@
 									if(index == "message") fb_text = $.fn.convertLink(value);
 									else if(index == "created_time") fb_created = value;
 									else if(index == "handler") fb_handler = value;
+									else if(index == "picture") fb_text = "<img src='"+value+"' align='"+window.imgthumb+"'>"+fb_text;
 								});
 								var timestamp = Date.parse(fb_created)/1000;
 								var timesince = $.fn.timesince(fb_created);

@@ -7,7 +7,7 @@ KhySocial is jquery plugin to get social media content from Twitter and Facebook
 - **fontsize** - set font size of content. default 14 pixel
 - **boxwidth** - set width for content boxes and value can be either pixel or percentage. default 200
 - **debug** - enable debug mode for troubleshooting. default false
-
+- **imgthumb** - align image thumb left or right. default left
 
 ### Twitter
 
@@ -56,6 +56,10 @@ D) get post tweet from multiple pages and filter post based on hashtag
 - **appsecret** - facebook application secret
 
 ## Change Log
+
+### [1.3.2] - 2017-11-23
+- add in parameter 'imgthumb'
+- simplify twitter data process
 
 ### [1.3.1] - 2017-11-22
 - update readme
