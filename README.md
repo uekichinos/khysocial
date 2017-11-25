@@ -55,6 +55,9 @@ D) get post tweet from multiple pages and filter post based on hashtag
 - **appid** - facebook application id
 - **appsecret** - facebook application secret
 
+## Feel Free To Donate
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EEDBD98RBZ2NW)
+
 ## Change Log
 
 ### [1.3.2] - 2017-11-23
