@@ -63,6 +63,3 @@ Provide require information as below.
 3. **access_token** - twitter access token
 4. **access_token_secret** - twitter access token secret
 
-
-## Feel Free To Donate
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EEDBD98RBZ2NW)
