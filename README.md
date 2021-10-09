@@ -19,7 +19,7 @@ TUS.Social is jquery plugin to get social media content from Twitter.
 
 	B) get tweet from multiple handler
 
-	    query: "@uekichinos,@bursamktplc,@LisaSurihani"
+	    query: "@uekichinos,@bursamktplc"
 
 	C) get tweet from single handler and filter tweet based on hashtag
 
