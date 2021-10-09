@@ -1,26 +1,26 @@
-#khysocial-container {
+#tussocial-container {
 	border:1px solid #9F9E9E;
 	margin:0px 0px 10px 0px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	box-shadow: 0px 0px 5px #888888;
 }
-#khysocial-text {
+#tussocial-text {
 	margin:5px;
 	display:block;
 	overflow:auto;
 }
-#khysocial-text a {
+#tussocial-text a {
 	color:#000000;
 	text-decoration:none;
 }
-#khysocial-text a:hover {
+#tussocial-text a:hover {
 	text-decoration:underline;
 }
-#khysocial-text img {
+#tussocial-text img {
 	border:1px solid #9F9E9E;
 }
-#khysocial-created {
+#tussocial-created {
 	border:1px solid #9F9E9E;
 	margin:5px;
 	display:block;
@@ -29,14 +29,14 @@
 	padding:2px;
 	font-size: 11px;
 }
-#khysocial-created img {
+#tussocial-created img {
 	float:right;
 }
-#khysocial-created a {
+#tussocial-created a {
 	color:#000000;
 	font-weight:bold;
 	text-decoration:none;
 }
-#khysocial-created a:hover {
+#tussocial-created a:hover {
 	text-decoration:underline;
 }

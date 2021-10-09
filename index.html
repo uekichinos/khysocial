@@ -1,38 +1,35 @@
 <html>
-	<header>
-		<meta charset="UTF-8">
-		<title>KhySocial</title>
-		<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/jquery.khysocial.css">
-	</header>
-	<body>
-		<br>
-		<div id="content"></div>
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-		<script src="js/jquery.khysocial.min.js"></script>
-		<script>
-			$('#content').khysocial({
-				fontsize: 12,
-				boxwidth: "300",
-				debug: false,
-				imgthumb: 'left',
-				social: {
-					twitter: {
-						query: "", 
-						limit: 3,
-						key: "",
-						secretkey: "",
-						token: "",
-						secrettoken: ""
-					},
-					facebook: {
-						query: "",
-						limit: 5,
-						appid: "",
-						appsecret: "",
-					}
-				}
-			});
-		</script>
-	</body>
+<header>
+	<meta charset="UTF-8">
+	<title>Social Posting</title>
+	<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/jquery.tussocial.css">
+</header>
+
+<body>
+	<br>
+	<div id="content"></div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/jquery.tussocial.js"></script>
+	<script>
+		$('#content').tussocial({
+			fontsize: 12,
+			boxwidth: "300",
+			debug: false,
+			imgthumb: 'left',
+			social: {
+				twitter: {
+					query: "#hsn2021",
+					limit: 15,
+				},
+				// facebook: {
+				// 	query: "page:BursaMarketplace",
+				// 	limit: 5,
+				// }
+			}
+		});
+	</script>
+</body>
+
 </html>
