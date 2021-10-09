@@ -1,6 +1,7 @@
 # TUS.Social
 
 TUS.Social is jquery plugin to get social media content from Twitter.
+[coffee for me?](https://www.buymeacoffee.com/uekichinos)
 
 ## Plugin Parameters
 
@@ -62,4 +63,3 @@ Provide require information as below.
 2. **consumer_secret** - twitter API secret key
 3. **access_token** - twitter access token
 4. **access_token_secret** - twitter access token secret
-
