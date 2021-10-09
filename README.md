@@ -47,9 +47,19 @@ $('#content').tussocial({
 
 ## Configuration
 
-Update config.ini file and provide require information as below. 
-1. **consumer_key** - twitter consumer key
-2. **consumer_secret** - twitter consumer secret
+Create file **config.ini** at root folder and insert below line.
+
+```
+[twitter]
+consumer_key = 
+consumer_secret = 
+access_token = 
+access_token_secret = 
+```
+
+Provide require information as below. 
+1. **consumer_key** - twitter API key
+2. **consumer_secret** - twitter API secret key
 3. **access_token** - twitter access token
 4. **access_token_secret** - twitter access token secret
 
