@@ -1,42 +1,45 @@
-#tussocial-container {
+.tussocial-container {
 	border:1px solid #9F9E9E;
-	margin:0px 0px 10px 0px;
+	margin:10px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-	box-shadow: 0px 0px 5px #888888;
+	box-shadow:0px 0px 2px #8886ff;
+	padding:10px;
+	border-radius:5px;
 }
-#tussocial-text {
+.tussocial-text {
 	margin:5px;
 	display:block;
 	overflow:auto;
 }
-#tussocial-text a {
+.tussocial-text a {
 	color:#000000;
 	text-decoration:none;
 }
-#tussocial-text a:hover {
+.tussocial-text a:hover {
 	text-decoration:underline;
 }
-#tussocial-text img {
+.tussocial-text img {
 	border:1px solid #9F9E9E;
 }
-#tussocial-created {
+.tussocial-created {
 	border:1px solid #9F9E9E;
 	margin:5px;
 	display:block;
 	overflow:auto;
-	background-color:#CCCCCC;
-	padding:2px;
+	background-color:#CCC9FD;
+	padding:7px;
 	font-size: 11px;
+	border-radius:5px;
 }
-#tussocial-created img {
+.tussocial-created img {
 	float:right;
 }
-#tussocial-created a {
+.tussocial-created a {
 	color:#000000;
 	font-weight:bold;
 	text-decoration:none;
 }
-#tussocial-created a:hover {
+.tussocial-created a:hover {
 	text-decoration:underline;
 }

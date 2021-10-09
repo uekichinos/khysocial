@@ -188,7 +188,7 @@
       // else if (value["social"] == "fb") social_link = "<a href='http://www.facebook.com/" + value["handler"] + "' target='_blank'>" + value["handler"] + "</a>";
 
       $(thisForm).append(
-        "<div id='tussocial-container' style='width:" + boxwidth + ";'><div id='tussocial-text' style='font-size:" + fontsize + "px;'>" + value["text"] + "</div><div id='tussocial-created'>" + social_link + " " + value["timesince"] + "<img src='img/" + value["social"] + "_logo.png' width='15'></div></div>"
+        "<div class='tussocial-container' style='width:" + boxwidth + ";'><div class='tussocial-text' style='font-size:" + fontsize + "px;'>" + value["text"] + "</div><div class='tussocial-created'>" + social_link + " " + value["timesince"] + "<img src='img/" + value["social"] + "_logo.png' width='15'></div></div>"
       );
     });
   };
