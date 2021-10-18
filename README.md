@@ -30,7 +30,7 @@ TUS.Social is jquery plugin to get social media content from Twitter.
 
 ## Sample Code
 
-Below sample code to get twitter **#hsn2021** with limit latest 15 post.
+Sample code as below to get twitter **#hsn2021** with limit latest 15 post.
 ```
 $('#content').tussocial({
 	fontsize:  12,
